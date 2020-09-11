@@ -1,3 +1,36 @@
+# <%
+# # BigBlueButton open source conferencing system - http://www.bigbluebutton.org/.
+# # Copyright (c) 2018 BigBlueButton Inc. and by respective authors (see below).
+# # This program is free software; you can redistribute it and/or modify it under the
+# # terms of the GNU Lesser General Public License as published by the Free Software
+# # Foundation; either version 3.0 of the License, or (at your option) any later
+# # version.
+# #
+# # BigBlueButton is distributed in the hope that it will be useful, but WITHOUT ANY
+# # WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# # PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
+# # You should have received a copy of the GNU Lesser General Public License along
+# # with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
+# %>
+
+# <div class="background">
+#   <div class="container pt-9 pb-8">
+#     <div class="row">
+#       <div class="col-md-12 col-sm-12 text-center">
+#         <h1 id="main-text" class="display-4 mb-4"> <%= t("landing.welcome").html_safe %></h1>
+#         <p class="lead offset-lg-2 col-lg-8 col-sm-12 "><%= t("landing.about", href: link_to(t("greenlight"), "https://bigbluebutton.org/2018/07/09/greenlight-2-0/", target: "_blank", rel: "noopener")).html_safe %></p>
+#         <%= link_to "https://youtu.be/Hso8yLzkqj8", target: "_blank" do %>
+#           <h4><%= t("landing.video") %> <i class="far fa-play-circle ml-1"></i></h4>
+#         <% end %>
+#       </div>
+
+#     </div>
+#   </div>
+# </div>
+
+# <%= render "main/components/features" %>
+
+
 <%
 # BigBlueButton open source conferencing system - http://www.bigbluebutton.org/.
 # Copyright (c) 2018 BigBlueButton Inc. and by respective authors (see below).
@@ -10,22 +43,71 @@
 # WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
 # PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
 # You should have received a copy of the GNU Lesser General Public License along
-# with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
+# with BigBlueButton; if not, see.
 %>
 
-<div class="background">
-  <div class="container pt-9 pb-8">
-    <div class="row">
-      <div class="col-md-12 col-sm-12 text-center">
-        <h1 id="main-text" class="display-4 mb-4"> <%= t("landing.welcome").html_safe %></h1>
-        <p class="lead offset-lg-2 col-lg-8 col-sm-12 "><%= t("landing.about", href: link_to(t("greenlight"), "https://bigbluebutton.org/2018/07/09/greenlight-2-0/", target: "_blank", rel: "noopener")).html_safe %></p>
-        <%= link_to "https://youtu.be/Hso8yLzkqj8", target: "_blank" do %>
-          <h4><%= t("landing.video") %> <i class="far fa-play-circle ml-1"></i></h4>
-        <% end %>
-      </div>
+<style>
+header.masthead {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+background: linear-gradient(to bottom, rgb(56 64 76 / 55%) 0%, rgb(56 64 76) 100%), url(/custom.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+header.masthead h1 {
+  font-size: 2.25rem;
+}
+@media (min-width: 992px) {
+  header.masthead {
+    /*height: 100vh;*/
+    min-height: 42rem;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+  }
+  header.masthead p {
+    font-size: 1.15rem;
+  }
+  header.masthead h1 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1200px) {
+  header.masthead h1 {
+    font-size: 3.5rem;
+  }
+}
+    
+.font-weight-bold {
+  font-weight: 700 !important; 
+}
 
+.text-white-75 {
+  color: rgba(255, 255, 255, 0.75);
+}
+    
+.h-100 {
+  height: 100% !important;
+}
+
+.font-weight-light {
+  font-weight: 300 !important;
+}
+</style>
+
+<header class="masthead">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-10 align-self-end">
+                <img style="height: 120px;" src="https://services.mycondolences.io/logo.png">
+                <h1 class="text-white font-weight-bold">Preserving Memories with Dignity and Devotion</h1>
+                <hr class="divider my-4">
+            </div>
+            <div class="col-lg-8 align-self-baseline">
+                <p class="text-white-75 font-weight-light mb-5"></p>
+                <a class="btn sign-in-button  btn-xl " href="/b/signup">Get Started Today!</a>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-
-<%= render "main/components/features" %>
+</header>
