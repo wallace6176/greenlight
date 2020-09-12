@@ -15,8 +15,8 @@
 
 <style>
 .btn {
-  color: #ffffff;
-  background-color: #52197e;
+  color: rgba(192, 132, 42);
+  background-color: rgba(82, 25, 126);
 }
 
 .btn-outline-primary {
@@ -113,15 +113,23 @@
         <% else %>
           <% allow_greenlight_accounts = allow_greenlight_accounts? %>
           <% if allow_greenlight_accounts %>
-            <%= link_to t("login"), signin_path, :class => "btn btn-outline-primary mx-2 sign-in-button" %>
+            <form action="/b/signin">
+                <input type="submit" class="btn" href="/b/signin" value="Sign In">
+            </form>
           <% elsif Rails.configuration.loadbalanced_configuration %>
-            <%= link_to t("login"), omniauth_login_url(:bn_launcher), :class => "btn btn-outline-primary mx-2 sign-in-button" %>
+            <form action="/b/signin">
+                <input type="submit" class="btn" href="/b/signin" value="Sign In">
+            </form>
           <% else %>
-            <%= link_to t("login"), signin_path, :class => "btn btn-outline-primary mx-2 sign-in-button" %>
+            <form action="/b/signin">
+                <input type="submit" class="btn" href="/b/signin" value="Sign In">
+            </form>
           <% end %>
 
           <% if allow_user_signup? && allow_greenlight_accounts %>
-            <%= link_to t("signup.title"), signup_path, :class => "btn btn-outline-primary mx-2 sign-in-button" %>
+            <form action="/b/signup">
+                <input type="submit" class="btn" href="/b/signup" value="Sign Up">
+            </form>
           <% end %>
         <% end %>
       </div>
