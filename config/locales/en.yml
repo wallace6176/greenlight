@@ -192,7 +192,7 @@ en:
         username: Username
       title: Manage Users
   add_to_google_calendar: "Add to Google Calendar"
-  bigbluebutton: BigBlueButton
+  bigbluebutton: MyCondolences
   bigbluebutton_exception: Oops, there was an error when starting the meeting!
   cancel: Cancel
   cookies:
@@ -263,7 +263,7 @@ en:
   footer:
     legal: Legal
     privpolicy: Privacy Policy
-    powered_by: Powered by %{href}.
+    powered_by: Powered by MyCondolences
   forgot_password:
     subtitle: Forgot Password
     email: Email
